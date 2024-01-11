@@ -1,0 +1,63 @@
+
+body {
+  /* background image referenced in accordance with guidelines */
+  font-family: Arial, sans-serif;
+  background-image: url("https://img.freepik.com/free-vector/ribbon-cutting-ceremony-poster-with-red-curtains-vector-illustration_91128-938.jpg?w=826&t=st=1679222757~exp=1679223357~hmac=1db0b0e845bfba3cb21e5220c14fdb61e965704c92303080693c99ca74bfd2d4");
+  background-size: cover;
+  color: azure;
+}
+
+footer {
+  color:#f1f3f1
+  
+}
+
+/* creates main container class for the primary buttons to be in the centre of the page */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+
+/* both the original set up button and the startgame button are fixed into the centre of the page */
+#originalButton {
+  position: fixed;
+  bottom: 50;
+}
+
+#startGame {
+  position: fixed;
+  bottom: 50;
+}
+
+
+/* nice design for button is given */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+  }
+
+  /* when the cursor hovers over the button, a nice emphasis is created */
+  button:hover {
+        transform: scale(1.1);
+        background-color: #3e8e41;
+      }

@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> Super Dice Game</title>
+    <meta name = "Author" content = "Alex Farrell Webb">     
+    <meta name = "description" content = "Short and easy dice rolling game where scores are calculated thus:
+  
+      All N dice have the same value :	60 + Sum of the values of all the dice	
+
+      N - 1 but not N dice have the same value	: 40 + Sum of the values of all the dice	
+
+      A run (a sequence K+1 to K+N for some K ≥ 0) :	20 + Sum of the values of all the dice
+
+      All dice have different values, but it is not a run :	Sum of the values of all the dice	
+     
+      Any other outcome	 : 0
+    ">
+
+    <meta name = "keywords" content = "gambling, game, gambling, dice , chance, gameble responsibly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--CSS styling is linked below-->
+    <link rel="stylesheet" href="game.css">
+
+    <!--here is the javascript reference for thr various functions used in the page creation-->
+    <script src="game.js"></script>
+  </head>
+  <body>
+    
+
+    <!-- the div here is so that everything is nicely centred in the middle of the page -->
+    <div class= "container">
+     
+    <!-- the first two buttons are for the set up stage   -->
+    <button id="originalButton" onclick="getUserInput()"> Let`s play! Click here to choose your number of dice!</button>
+    <button id="startGame" style="display: none;" onclick="play()">Time to play, click here to begin the first round!</button>
+
+    <!-- the dicerolls are displayed using a table, so also needed their own div element -->
+    <div id = "dicerolls"></div> 
+
+    <!--These p elements display the round information, and are updated every time the play or play again button is clicked-->
+    <p id = "roundResult"> </p>
+    <p id = "roundNum"> </p>
+    <p id = "roundScore"> </p>   
+    <p id = "balance"> </p>
+
+     <!-- these buttons only appear after the first round has been played, and give the player the option to continue or to quit-->
+    <button id="playAgain" style="display:none;" onclick="play()"> Do you wish to play another round?</button>
+    
+    <button id="endGame" style="display:none;" onclick="endGame()">Had enough? Click here to end the game</button>
+
+    <!-- Once the player decides to quit the game, the average score over the rounds is displayed, as well as the option to reset the game-->
+    <p id = "averageScore"> </p>
+    <button id="reset" style = "display:none;" onclick="location.reload()">Click here to play again from the beginning!</button>
+    </div>
+    
+    <footer>
+      <!--I have referenced all images used in the style that they required on the webpag I found them-->
+      <p>Background image &copy; <a href="https://www.freepik.com/free-vector/ribbon-cutting-ceremony-poster-with-red-curtains-vector-illustration_16305272.htm#query=casino&position=11&from_view=search&track=sph#position=11&query=casino" style="color: green;">Image by nuraghies</a> on Freepik</p>
+      <p> Dice image &copy; <a href="https://www.freepik.com/free-vector/vector-set-red-casino-dice-top-view-isolated-green-poker-table_11062555.htm#query=dice&position=1&from_view=search&track=sph" style="color: green;">Image by macrovector</a> on Freepik</p>
+    </footer>
+  </body>
+</html>
+
+
